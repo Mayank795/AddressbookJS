@@ -1,10 +1,11 @@
 const AddressBook = require('./Source/Service/AddressBook');
 const Contact = require('./Source/Model/Contact');
+
 const addressBook = new AddressBook();
 
 try {
     const contact1 = new Contact(
-        "Ankit", "Patel", "Bhopal", "India", "In", "100001", "9876543210", "yugap1806@gmail.com"
+        "Anand", "Soni", "Bhopal", "India", "In", "100001", "9876543210", "anandsoni9165@gmail.com"
     );
     console.log(addressBook.addContact(contact1)); 
 
@@ -15,6 +16,8 @@ try {
     console.log("All Contacts Before editing", addressBook.getAllContacts());
     console.log(addressBook.editContact("Rakesh", { address: "Pipariya", city: "New York", phone: "9234567890" }));
     console.log("All Contacts After editing", addressBook.getAllContacts());
+    console.log(addressBook.deleteContact("Rakesh"));
+    console.log("All Contacts After Deleting:", addressBook.getAllContacts());
 } catch (error) {
     console.error("Error:", error.message);
 }
