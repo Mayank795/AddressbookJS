@@ -4,7 +4,7 @@ const addressBook = new AddressBook();
 
 try {
     const contact1 = new Contact(
-        "Anand", "Soni", "Bhopal", "India", "In", "100001", "9876543210", "anandsoni9165@gmail.com"
+        "Ankit", "Patel", "Bhopal", "India", "In", "100001", "9876543210", "yugap1806@gmail.com"
     );
     console.log(addressBook.addContact(contact1)); 
 
@@ -20,7 +20,7 @@ try {
     console.log("Total Contacts:", addressBook.countContacts()); 
 
     const duplicateContact = new Contact(
-        "Anand", "Soni", "Bhopal", "India", "In", "100001", "9876543210", "anandsoni9165@gmail.com"
+        "Ankit", "Patel", "Bhopal", "India", "In", "100001", "9876543210", "yugap1806@gmail.com"
     );
     console.log(addressBook.addContact(duplicateContact));  
 
@@ -35,6 +35,19 @@ try {
 
     console.log("\nContacts Sorted Alphabetically:");
     console.log(addressBook.sortContactsByName().map(contact => contact.toString()).join("\n"));
+
+    console.log("\nContacts Sorted by Name:");
+    console.log(addressBook.sortContactsByName().map(contact => contact.toString()).join("\n"));
+
+    console.log("\nContacts Sorted by City:");
+    console.log(addressBook.sortContactsByCity().map(contact => contact.toString()).join("\n"));
+
+    console.log("\nContacts Sorted by State:");
+    console.log(addressBook.sortContactsByState().map(contact => contact.toString()).join("\n"));
+
+    console.log("\nContacts Sorted by Zip:");
+    console.log(addressBook.sortContactsByZip().map(contact => contact.toString()).join("\n"));
+
 } catch (error) {
     console.error("Error:", error.message);
 }
