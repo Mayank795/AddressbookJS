@@ -1,6 +1,5 @@
 const AddressBook = require('./Source/Service/AddressBook');
 const Contact = require('./Source/Model/Contact');
-
 const addressBook = new AddressBook();
 
 try {
@@ -31,6 +30,8 @@ try {
     console.log("Viewing Persons by City or State:");
     console.log(addressBook.viewPersonsByCityOrState());
 
+    console.log("Count of Contacts by City and State:");
+    console.log(addressBook.countByCityOrState());
 } catch (error) {
     console.error("Error:", error.message);
 }
