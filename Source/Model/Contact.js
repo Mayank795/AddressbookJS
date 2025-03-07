@@ -1,3 +1,4 @@
+
 class Contact {
     constructor(firstName, lastName, address, city, state, zip, phone, email) {
         this.validateName(firstName, "First Name");
@@ -52,6 +53,10 @@ class Contact {
             throw new Error("Invalid Email Address.");
         }
     }
+    toString() {
+        return `${this.firstName} ${this.lastName}, ${this.address}, ${this.city}, ${this.state} - ${this.zip}, Phone: ${this.phone}, Email: ${this.email}`;
+    }
+    
 }
 
 module.exports = Contact;
